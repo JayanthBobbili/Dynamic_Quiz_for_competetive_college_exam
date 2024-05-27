@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+#bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 11.5px 23px; /* Increase size by 15% */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.5s, transform 0.3s;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 11.5px 23px; /* Increase size by 15% */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.5s, transform 0.3s;
+}
+
+.top-left:hover,
+.bottom-right:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+  

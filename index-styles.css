@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+}
+
+
+#next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.5s, box-shadow 0.3s; /* Added box-shadow transition */
+  box-shadow: 2px 2px 5px blue; /* Box shadow with offset-x, offset-y, blur-radius, and color */
+}
+
+#next-button.hide {
+  opacity: 0;
+}
+
+#next-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+

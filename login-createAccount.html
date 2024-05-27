@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .video-background {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .login-container {
+        width: 300px;
+        padding: 20px;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: block; /* Initially set to block */
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #007bff;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .signup-link {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .signup-link a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .signup-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<!-- <body> 
+<div class="video-background">
+    <video autoplay muted loop>
+        <source src="videos/choice.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="login-container">
+    <h1>Create an Account</h1>
+    <form action="login-createAccount.php" method="POST">
+        <input type="text" name = "first_name"placeholder="First Name" required>
+        <input type="text" name = "last_name"placeholder="Last Name" required>
+        <input type="text" name = "phone_number"placeholder="Phone Number" required>
+        <input type="text" name = "email"placeholder="Email" required>
+        <input type="password" name = "password"placeholder="Password" required>
+        <input type="submit" value="Create Account">
+    </form>
+    <div class="signup-link">
+        <a href="login.html">Already have an account? Login</a>
+    </div>
+    <?php
+    if (isset($_GET['error'])) {
+        echo '<div class="error-message" style="color: red; text-align: center;">' . htmlspecialchars($_GET['error']) . '</div>';
+    }
+    ?>
+</div>
+</body>-->
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="videos/login-signup2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.login-container').style.display = 'block';
+        }, 3000); // 3 seconds
+    </script>
+    <div class="login-container">
+        <h1>Create Account</h1>
+        <form id="signup-form">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <div class="signup-link">
+            <a href="login.html">Already have an account? Log in</a>
+        </div>
+        <div id="error-message" style="color: red; text-align: center;"></div>
+    </div>
+    
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(event.target);
+            fetch('login-createAccount.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data.includes('User already exists') || data.includes('Please fill in all required fields')) {
+                    document.getElementById('error-message').textContent = data;
+                } else if (data.includes('Account created successfully')) {
+                    window.location.href = 'login.html';
+                } else {
+                    document.getElementById('error-message').textContent = 'An unexpected error occurred';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+    </body>
+
+</html>
+
