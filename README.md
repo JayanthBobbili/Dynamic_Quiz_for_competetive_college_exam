@@ -5,4 +5,5 @@
 * This community will be an interface where people who has already given the competitive examination or campus placement preparation their insight s on solving the problems in the stipulated time. If any quant questions asked for them in a particular question they can share how they tackled this question.
 * This type of community is most important as of there are no such communities to solve these type problems, hoping this would be the first.
 * Anyone wanting to make contributions or have any ideas can ping me through my Email:- jayanthbobbili@gmail.com
-* 
+
+![alt text](videos/index.mp4)
