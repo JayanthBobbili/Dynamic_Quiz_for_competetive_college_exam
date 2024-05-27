@@ -6,4 +6,4 @@
 * This type of community is most important as of there are no such communities to solve these type problems, hoping this would be the first.
 * Anyone wanting to make contributions or have any ideas can ping me through my Email:- jayanthbobbili@gmail.com
 
-[![Watch the video](videos/index.mp4)]
+[![Watch the video](videos/index.mp4)] (videos/index.mp4)
