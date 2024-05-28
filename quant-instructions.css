@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0; 
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -134,12 +134,14 @@ body {
 .content-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end; /* Align items to the right */
+    justify-content: flex-start; /* Align items to the top */
     height: calc(100vh - 60px);
-    padding: 20px;
-    text-align: center;
+    padding-right: 60px;
+    padding-top: 160px;
+    text-align: right; /* Ensure text is aligned to the right */
 }
+
 
 h1 {
     font-size: 2rem;
@@ -149,17 +151,20 @@ h1 {
 .instructions {
     font-size: 1.5rem;
     text-align: left;
-    margin: 0 auto;
+    margin-left: auto;
+    padding-right: 140px;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    /* margin-top: auto; */
+    align-self: flex-end; /* Align button container to the right */
+    padding-right: 320px;
 }
 
 #begin-test {
-    padding: 20px 40px;
+    padding: 20px 20px;
     font-size: 1.5rem;
     background-color: #007bff;
     color: white;
@@ -210,3 +215,4 @@ body.dark-mode {
         transform: translateX(10px);
     }
 }
+

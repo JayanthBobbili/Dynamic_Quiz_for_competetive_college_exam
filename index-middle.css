@@ -5,6 +5,13 @@ body {
   font-size: 16px; /* Adjust font size as needed */
 }
 
+div{
+  font-size: large;
+}
+a{
+  font-size: 32px;
+}
+
 #bg-image {
   position: fixed;
   top: 0;
@@ -16,22 +23,22 @@ body {
 
 .top-left {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 11.5px 23px; /* Increase size by 15% */
+  top: 420px;
+  left: 60px;
+  padding: 30px 30px; /* Increase size by 15% */
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: whitesmoke;
   cursor: pointer;
   transition: opacity 0.5s, transform 0.3s;
 }
 
 .bottom-right {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 11.5px 23px; /* Increase size by 15% */
+  top: 420px;
+  right: 60px;
+  padding: 30px 30px; /* Increase size by 15% */
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: whitesmoke;
   cursor: pointer;
   transition: opacity 0.5s, transform 0.3s;
 }

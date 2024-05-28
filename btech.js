@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const profile = document.getElementById('profile');
 
     DSA.addEventListener('click', () => {
-        window.location.href = 'dsa-instructions.html';
+        window.location.href = 'verbal-instructions.html';
     });
 
     OS.addEventListener('click', () => {
-        window.location.href = 'os-instructions.html';
+        window.location.href = 'quant-instructions.html';
     });
 
     profile.addEventListener('click', () => {
